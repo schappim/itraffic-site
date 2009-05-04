@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>iTraffic</title>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" id="defaultStyle" href="css/style.css" type="text/css" media="screen, projection" />
+<!--[if IE]>
+  <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection"/>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.3.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-personalized-1.6rc6.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('HTML').addClass('JS');
+	
+	$("#tabs").tabs();
+	
+	//used to give all tabs the same height
+	var maxHeight=0;
+	$("#tabs div").each(function(){
+		var myDiv=$(this);
+		var isHidden=false;
+		if(myDiv.hasClass("ui-tabs-hide")){
+			isHidden=true;
+			myDiv.removeClass("ui-tabs-hide");
+		}
+		if((myHeight=myDiv.height())>maxHeight){
+			maxHeight=myHeight;	
+		}else{
+			myDiv.height(maxHeight);	
+		}
+		if(isHidden){
+			myDiv.addClass("ui-tabs-hide");
+		}
+	});
+	
+	$("#slide").cycle({
+		fx: 		'scrollDown',
+		timeout: 	'4000'
+	});
+});
+</script>
+ 
+<!--[if lt IE 7]>
+ <link rel="stylesheet" href="css/style_ie6.css" type="text/css" media="screen, projection"/>
+<script src="js/DD_belatedPNG_0.0.7a-min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    DD_belatedPNG.fix('.ui-tabs, .ui-tabs-nav, .ui-tabs-nav li,.ui-tabs-nav li a,#slide-wrapper .inner, .button, .testimonial, .testimonial .inner, .feature-list img, .download ');
+    
+    $(".ui-tabs-nav li a").click(function(){
+        DD_belatedPNG.fix('.ui-tabs-nav li,.ui-tabs-nav li a');
+    });
+
+});
+</script>
+<![endif]-->
+</head>
+<body id="home">
+<div class="header">
+  <div class="container">
+    <h1><a href="index.html" title="Back to home">iTraffic</a></h1>
+   <div id="login"> <a href="signup.html" title="Download No">Download Now</a></div>    <div id="nav">
+      <ul>
+        <li class="first current"><a href="index.html" title="Home">home</a></li>
+        <li><a href="tour.html" title="take the tour">take the tour</a></li>
+        <li><a href="http://www.twitter.com/itraffic"  title="micro blog">micro blog</a></li>
+        <li><a href="contact.php"  title="contact">contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- *************** content *************** -->
+<div id="page">
+  <div class="wrapper">
+    <div class="container">
+      <div class="span-12 col1">
+		<div id="tagline" style="height:145px;">
+		<div style="width:35%; float:left; padding-top:10px;">
+			<img src="img/itraffic_logo.png"/>
+		</div>
+		<div style="width:65%; float:left;">
+          <h2>iTraffic</h2>
+          <p style="font-size:16px;">iTraffic is a driver awareness application that alerts you to school zones and speed cameras as you drive. It will change the way you drive.</p>
+        </div>
+		</div>
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1"><span>features</span></a></li>
+            <li><a href="#tabs-2"><span>speed camera alerts</span></a></li>
+            <li><a href="#tabs-3"><span>school zone alerts</span></a></li>
+            <li><a href="#tabs-4"><span>support</span></a></li>
+
+          </ul>
+          <div id="tabs-1" class="features-block">
+            <ul class="feature-list">
+              <li> <img src="img/speed-cam2.png" alt="" />
+                <h4>Speed camera alerts</h4>
+                <p>Audio alerts of upcoming speed cameras</p>
+              </li>
+              <li class="last"> <img src="img/school-zone.png" alt="" />
+                <h4>School zone alerts</h4>
+                <p>Audio alerts as you approach school zones (time specific)</p>
+              </li>
+              <li> <img src="img/audio.png" alt="" />
+                <h4>Audio alerts</h4>
+                <p>Audio alerts of upcoming speed cameras</p>
+              </li>
+              <li class="last"> <img src="img/australia.png" alt="" />
+                <h4>Australian Localized</h4>
+                <p>Created specifically for Australian roads and state differences</p>
+              </li>
+            </ul>
+          </div>
+          <div id="tabs-2">
+          <ul class="feature-list clearfix">
+            <li> <img src="img/speed-cam2.png" alt="" />
+                <h4>Speed Camera Alerts</h4>
+                <p>iTraffic is about Driver Awareness and providing subtle reminders of road concerns like speed cameras. It tracks your position and lets you know about coming traffic conditions through simple audio alerts.<br/>Ultimately, safe and responsible driving is up to every motorist, not just the RTA. Check out iTraffic on the Apple app store, or at iTrafficApp.com<br/><br/></p>
+				<p>To drive safely, drive smart, and avoid speed cameras. There are 171 speed cameras in NSW alone and more than 110 NSW residents lose their licenses every day. Most of these are not unsafe drivers, but the tightening of speed tolerance on speed cameras has them trapped.<br/><br/></p>
+				<p>Even the NSW government <a href="http://www.abc.net.au/news/stories/2008/11/14/2419994.htm">believes these levels are too strict</a>:<br/>
+	                    <p style="font-style: italic; font-size:12px;"><br/>"Motorists caught speeding by up to 15 kilometres an hour over the limit currently lose three demerit points.
+						NSW Roads Minister Michael Daley thinks that penalty is too harsh.
+						“A good demerits scheme to enforce traffic measures has to have an intelligent mix of carrot and stick and at the moment, I think there is too much stick,” he said."<br/><br/></p>
+						<p>Let iTraffic help you avoid punitive fines for minor speeding.</p>
+	               
+	</p>
+              </li>
+              </ul>
+          </div>
+          <div id="tabs-3">
+            <ul class="feature-list clearfix">
+	            <li> <img src="img/school-zone.png" alt="" />
+	                <h4>School Zone Alerts</h4>
+	                <p>iTraffic is about Driver Awareness and providing subtle reminders of road concerns like school zones. It tracks your position and lets you know about coming traffic conditions through simple audio alerts.<br/>
+					Ultimately, safe and responsible driving is up to every motorist, not just the RTA. Check out iTraffic on the Apple app store, or at iTrafficApp.com<br/><br/></p>
+
+					<p>Stories around school children being run over are always chilling reading. There are deaths every year inside designated school zones. This is horrible, yet can any driver claim that they always notice the school zone signs? Frankly, no. This is made worse by the fact that most of the time, you can ignore the sign – so we’re all used to maintaining our current speed – most of the time.<br/><br/></p>
+
+					<p>One approach to helping is to add flashing lights; surely people can’t miss those. So for some schools, the RTA has added flashing lights to the school zones signs and this has been effective and unmissable. However the vast majority of schools are not so blessed. Some schools have funded their own school zone flashing lights (courtesy of Peter Olsen). Even so, most school zones remain just a sign and remain largely unnoticed.<br/><br/></p>
+
+					<p>This is a terrible situation for the school child, at risk of being run down. But it’s also bad for the motorist, at (rightful) risk of being booked. Is there any other solution? What if every driver could take matters into their own hands? What if every driver could take responsibility for their own Driver Awareness?<br/><br/></p>
+	              </li>
+	              </ul>
+          </div>
+		 <div id="tabs-4">
+            <ul class="feature-list clearfix">
+	            <li> <img src="img/school-zone.png" alt="" />
+	                <h4>Support</h4>
+	               <p>Email <a mailto:"support@itrafficapp.com"> support@itrafficapp.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="span-12 col2 last">
+	
+       <div id="slide-wrapper">
+          <div class="inner">
+            <div id="slide"><img src="img/screen1.png" alt="" /> <img src="img/screen2.png" alt="" /> <img src="img/screen3.png" alt="" /> <img src="img/screen4.png" alt="" /> </div>
+          </div>
+        </div>
+        <div id="cta" class="clearfix button-row"><a href="#" class="button"><span>take the tour</span></a> <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=312468890&mt=8" class="button green-button last"><span>download now</span></a></div>
+        <div id="testimonials">
+<div class="testimonial"><div class="inner">
+        <cite>"I would recommend this for anyone driving..."</cite>
+        </div><h6>Bob - App Store Review</h6></div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- *************** footer *************** -->
+<div class="footer">
+  <div class="container"><div class="span-24 content"><p>Copyright &copy; 2009 <a href="http://www.appovation.com" title="AppOvation">AppOvation Pty Ltd</a>. All rights reserved.</p></div> </div>
+</div>
+</body>
+</html>
